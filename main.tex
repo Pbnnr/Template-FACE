@@ -1,50 +1,61 @@
-\documentclass[a4paper,12pt]{report}
-% \usepackage[acronym, labelref, glossaries, index, debug]{CEFET}
-\usepackage[acronym, labelref]{CEFET}
-\addbibresource{Referencias.bib}
-\input{Dados}
-% \input{3-Pos-Textual/Glossario.tex}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Se gostou desse template, deixe sua estrela no GitHub:
+% Esse template foi um fork do 
 % https://github.com/lucasmsoares96/Template-Monografia-CEFET-MG
+% Modificado para atender aos padrões da FACE-UFMG
+% Já está usando as atualizações da abnt de 2023 para as citações
+% Esse documento é dividido em três arquivos tex diferentes: pre_textual.tex, textual.tex e pos_textual.tex
+%
+% Pedro Benner
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,oneside]{memoir}
+\usepackage{FACE}
+
+\addbibresource{bibliografia.bib}
+
+
+% Configurações do Documento
+\title{Título do Trabalho:}
+\subtitle{subtítulo do trabalho (se houver)}
+\author{Nome do Autora}  
+
+\date{2024}
+\location{Belo Horizonte}
+
+\advisor{Orientador: Título Nome}
+\coadvisor{}
+
+\committeeone{Nome do Orientador\\ Titulação}
+\committeetwo{Nome do Avaliador\\ Titulação}
+% \committeethree{Título Nome\\ Titulação} Se houver terceiro membro da banca modificar também o arquivo FACE.sty
+
+
+% Lembre de colocar a data real no lugar de "\today" antes de imprimir a folha de aprovação
+\committeedate{\today}
+
+\institution{
+  Universidade Federal de Minas Gerais
+  \\
+  Faculdade de Ciências Econômicas
+  \\
+  Departamento de Ciências Econômicas
+}
+
+\preamble{Monografia apresentada ao Departamento de Ciências Econômicas da Universidade Federal de Minas Gerais, como requisito parcial à obtenção do título de Bacharel em Ciências Econômicas.}
+
 
 \usepackage{lipsum}    % gera texto aleatório (remover)
 
 \begin{document}
-\maketitle % Capa                    (obrigatório)
-% Lombada                            (opcional)
 
+\frontmatter
 \pretextual
-\makecover % folha de rosto               (obrigatório)
-\input{1-Pre-Textual/Errata.tex}%         (opcional)
-\makeapproval %                           (obrigatório)
-\input{1-Pre-Textual/Dedicatoria.tex}%    (opcional)
-\input{1-Pre-Textual/Agradecimentos.tex}% (opcional)
-\input{1-Pre-Textual/Epigrafe.tex}%       (opcional)
-\input{1-Pre-Textual/Resumo.tex} %        (obrigatório)
-\input{1-Pre-Textual/Abstract.tex} %      (obrigatório)
-\listoffigures %                          (opcional)
-\listoftables  %                          (opcional)
-\input{1-Pre-Textual/Siglas.tex} %        (opcional)
-\input{1-Pre-Textual/Simbolos.tex} %      (opcional)
-\tableofcontents %                        (obrigatório)
+\input{pre_textual}
 
+\mainmatter
 \textual
-\input{2-Textual/1-Introducao.tex}
-\input{2-Textual/2-Referencial-Teorico.tex}
-% \input{2-Textual/3-Metodologia.tex}
-% \input{2-Textual/4-Resultados.tex}
-% \input{2-Textual/5-Conclusao.tex}
+\input{textual}
 
-\postextual
-\clearpage\pagestyle{empty}
-\printbibliography %                 (obrigatório)
-% \printglossaries %                   (opcional)
-\clearpage\pagestyle{plain}
-\input{3-Pos-Textual/Apendice.tex} % (opcional)
-\input{3-Pos-Textual/Anexo.tex} %    (opcional)
-% \printindex %                        (opcional)
+\input{pos_textual}
 
 \end{document}

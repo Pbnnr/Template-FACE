@@ -1,0 +1,58 @@
+% Conserta o indent para alinhar conforme padrão de normalização
+\addtocontents{toc}{\cftsetindents{chapter}{1.5cm}{3em}}
+\addtocontents{toc}{\cftsetindents{section}{0cm}{1.5cm}}
+\addtocontents{toc}{\cftsetindents{subsection}{0cm}{1.5cm}}
+\addtocontents{toc}{\cftsetindents{subsubsection}{0cm}{1.5cm}}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchapteraftersnum}{\enskip\textemdash\enskip}}
+
+
+\printbibliography[title={REFERÊNCIAS}, heading=bibintoc] %
+
+% ---
+% Inicia os apêndices
+% Para as seções nos apêndices usar o comando \section* que não adiciona a seção no sumário.
+% ---
+\appendix
+\chapterstyle{apendices}
+
+% ----------------------------------------------------------
+\chapter{Processo de estabilização em cada passo}\label{passo}
+% ----------------------------------------------------------
+\lipsum[10]
+
+% ----------------------------------------------------------
+\chapter{Visualizações das pilhas de areia}\label{caleidoscopios}
+% ----------------------------------------------------------
+\lipsum[10]
+
+
+\section*{Visualização da característica fractal da pilha de areia}
+\lipsum[10]
+
+% ---
+% Inicia os anexos
+% ---
+\addtocontents{toc}{\protect\renewcommand\protect\cftappendixname{\nomeanexo~}}
+\appendix
+\chapterstyle{anexos}
+
+% Imprime uma página indicando o início dos apêndices
+
+% ----------------------------------------------------------
+\chapter{Anexos}
+% ----------------------------------------------------------
+\lipsum[5]
+
+% ----------------------------------------------------------
+\chapter{outro anexos}
+
+\lipsum[5]
+
+\section*{seção no anexo}
+
+\lipsum[5]
+
+\section*{Outra seção no anexo}
+
+\lipsum[5]
+

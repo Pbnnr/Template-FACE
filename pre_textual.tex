@@ -1,0 +1,89 @@
+
+\maketitle
+\makecover % folha de rosto               (obrigatório)
+% Se houver errata, deverá ser incluída após a folha de rosto
+
+
+% ---
+% Após a apresentação do trabalho incluir o pdf com a folha com as assinaturas utilizando os seguintes comandos.
+% 
+% \begin{titlingpage*}
+% \includepdf{folha_assinada.pdf}
+% \end{titlingpage*}
+%
+\makeapproval %  (obrigatório)
+
+\dedication{Folha na qual o autor presta uma homenagem ou dedica seu trabalho. Não leva título e a dedicatória deve aparecer na parte inferior da página, a 8cm da margem esquerda.}
+
+\clearpage\pagestyle{empty}
+\chapter*{Agradecimentos}
+"Expressos pelo autor que presta seu reconhecimento às pessoas e instituições que
+colaboraram na elaboração do seu trabalho. Não leva indicativo numérico e o título
+deve ser centralizado na folha, utilizando a mesma tipologia das seções primárias do
+texto." conforme o manual de normalização página 10.
+\clearpage
+
+% \input{1-Pre-Textual/Epigrafe.tex}%       (opcional)
+
+\epigraph{only a boring man will always want things to match;
+real quality lies in irregularity}{Yoshida Kenkō}
+
+\clearpage\pagestyle{empty}
+% \input{1-Pre-Textual/Resumo.tex} %        (obrigatório)
+
+\begin{abstract}
+    É a apresentação concisa dos pontos relevantes do texto, fornecendo uma visão rápida
+    e clara do conteúdo do trabalho e das conclusões alcançadas, de tal forma que este
+    possa dispensar a consulta ao original. Deve ter uma extensão de 150 a 500 palavras.
+    Abaixo do resumo devem figurar as palavras-chave, representativas do conteúdo do
+    trabalho. Devem ser precedidas da expressão Palavras-chave: separadas entre si por
+    ponto e finalizadas também por ponto.
+    \\ \\
+    \textbf{Palavras-chave:} Palavra-chave 1; Palavra-chave 2; Palavra-chave 3; Palavra-chave 4; Palavra-chave 5.
+\end{abstract}
+\clearpage
+
+% \input{1-Pre-Textual/Abstract.tex} % 
+\begin{otherlanguage}{english}
+    \begin{abstract}
+        Tradução do resumo em língua vernácula preferencialmente para o inglês. Deve ser
+        seguido das palavras-chave traduzidas para a mesma língua.
+        Localizado logo após o resumo em língua vernácula.
+        \\ \\
+        \textbf{Keywords:} Keywords 1; Keywords 2; Keywords 3; Keywords 4; Keywords 5.
+    \end{abstract}
+\end{otherlanguage}
+\clearpage
+
+
+\listoffigures* %                          (opcional)
+% \listoftables*  %                          (opcional)
+
+
+% --- Lista de abreviaturas (opcional)
+% Lista de abreviaturas usando o pacote acronym. As abreviaturas precisam ser usadas no texto usando o comando \ac{} na primeira vez que for invocado ele substituirá a descrição longa e nas vezes subsequentes incluirá apenas a sigla com um link para a definição na lista de abreviaturas 
+% ---
+
+% \chapter*{Lista de Abreviaturas e Siglas}
+% \begin{acronym}
+%     \acro{API}{Interface de Programação de Aplicativos, do inglês \textit{Application Programming Interface}}
+%     \acro{CPU}{Unidade Central de Processamento, do inglês \textit{Central Processing Unit}}
+%     \acro{DAG}{Grafos Acíclicos Dirigidos, do inglês \textit{Directed Acyclic Graph}}
+%     \acro{GC}{Coletor de Lixo, do inglês \textit{Garbage Collector}}
+%     \acro{VM}{Maquina Virtual, do inglês \textit{Virtual Machine}}
+% \end{acronym}
+
+
+% ---
+% inserir lista de símbolos
+% ---
+\nomenclature{$\alpha$}{Letra grega minúscula alpha}
+\nomenclature{$\rightarrow$}{"Tem seu valor alterado para..."}
+\nomenclature{$\propto$}{"é proporcional à..."}
+\nomenclature{$\lesssim$}{"Aproximadamente menor que..."}
+\nomenclature{$\gg$}{"Muito maior que..."}
+\printnomenclature
+
+\clearpage
+
+\tableofcontents* %                        (obrigatório)
