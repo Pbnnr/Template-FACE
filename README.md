@@ -1,6 +1,6 @@
 # Template FACE-UFMG
 
-## Repositório Abandonado em favor do repositório sincronizado com o Overleaf pbnnr/Trabalhos-Academicos-FACE
+## Repositório Abandonado em favor do repositório sincronizado com o Overleaf [Pbnnr/Trabalhos-Academicos-FACE](https://github.com/Pbnnr/Trabalhos-Academicos-FACE)
 
 Esse repositório consiste no template latex que atende as normas oficiais da [Biblioteca Universitária](https://face.ufmg.br/component/phocadownload/category/1-bilioteca.html?download=5:manual-de-normalizacao) da FACE/UFMG.
 
